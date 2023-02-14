@@ -1,0 +1,583 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* General */
+/* Body */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(153, 117, 117);
+}
+.containerMeme .contentMeme .imageMeme .buttons{
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+.containerMeme .contentMeme .imageMeme .buttons a button{
+    font-size: 3em;
+    height: 8rem;
+    width: 30rem;
+    background-color: rgb(201, 203, 211);
+    box-shadow: 0.1em 0.1em rgb(147, 142, 142);
+    color: rgb(132, 103, 103);
+    text-shadow: 0.04em 0.04em rgb(173, 109, 109);
+}
+
+.containerMeme .contentMeme .imageMeme .buttons a button:hover{
+    background-color: rgb(168, 182, 188);
+    box-shadow: 0.1em 0.1em gray;
+    color: rgb(116, 124, 150);
+    text-shadow: 0.04em 0.04em rgb(115, 126, 143);
+}
+
+/* Top n SVG */
+.top{
+    position: fixed;
+    height: 2em;
+    width: 100%;
+    top: 0;
+    background-color: rgb(42, 42, 42);
+    border-bottom: 0.5em dotted rgb(104, 97, 97);
+    z-index: 0;
+}
+.navBar{
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    padding-bottom: 0.5em;
+    background-color: rgb(42, 42, 42);
+    border-bottom: 0.3em solid rgb(104, 97, 97);
+    border-right: 0.3em solid rgb(76, 70, 70);
+    border-left: 0.3em solid rgb(76, 70, 70);
+}
+.navBarItems{
+    display: flex;
+}
+.navBarItems a{
+    height: 2em;
+    padding-top: 0.9em;
+    width: 8em;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(113, 89, 89);
+    background-color: rgb(180, 166, 166);
+    border: 0.3em dotted rgb(104, 97, 97);
+    box-shadow: 0.2em 0.3em gray;
+    text-shadow: 0.04em 0.04em rgb(59, 53, 53);
+}
+.navBarItems a:hover{
+    height: 2em;
+    padding-top: 0.9em;
+    width: 8em;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(113, 89, 89);
+    background-color: rgb(193, 181, 181);
+    border: 0.3em solid rgb(137, 122, 122);
+    box-shadow: 0.2em 0.3em rgb(86, 84, 84);
+    text-shadow: 0.04em 0.07em rgb(29, 27, 27);
+}
+.navBarItems .left{
+    margin-left: 0.3em;
+    margin-right: 10vw;
+}
+.navBarItems .right{
+    margin-left: 10vw;
+    margin-right: 0.4em;
+}
+svg{
+    display: fixed;
+    bottom: 0;
+}
+/* Loading Screen */
+.loader-wrapper{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(145, 123, 123);
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.loading{
+    width:120px;
+    height: 120px;
+    position: relative;
+    margin: 150px auto;
+    background-color: #e7c5c5;
+    animation: spin 2s linear infinite;
+    animation-direction: reverse;
+}
+
+.shape{
+    display: block;
+    position: absolute;
+    height: 20px;
+    width: 40px;
+    background-color: #fff;
+    mix-blend-mode: exclusion;
+    backface-visibility: visible;
+}
+
+.shape.shape-1{
+    animation: spin1 2s ease-in-out infinite;
+    animation-fill-mode: forwards;
+}
+
+.shape.shape-2{
+    animation: spin2 2s ease-in-out infinite;
+    animation-fill-mode: forwards;
+}
+
+.shape.shape-3{
+    animation: spin3 2s ease-in-out infinite;
+    animation-fill-mode: forwards;
+}
+
+.shape.shape-4{
+    animation: spin4 2s ease-in-out infinite;
+    animation-fill-mode: forwards;
+}
+
+.shape.shape-1{
+    top: 20px;
+    left: 40px;
+}
+
+.shape.shape-2{
+    top: 40px;
+    right: 20px;
+    width: 20px;
+    height: 40px;
+}
+
+.shape.shape-3{
+    left: 40px;
+    bottom: 20px;
+}
+
+.shape.shape-4{
+    top: 40px;
+    left: 20px;
+    width: 20px;
+    height: 40px;
+}
+
+@keyframes spin{
+    100%{
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes spin1{
+    25%{
+        transform: rotate(90deg) translate(30px, -10px) scaleX(1);
+    }
+    100%{
+        transform: rotate(90deg) translate(30px, -10px) scaleX(2);
+    }
+}
+
+@keyframes spin2{
+    15%{
+        transform: rotate(0deg) translate(0px) scaleY(1) ;
+    }
+    50%{
+        transform: rotate(90deg) translate(10px, 30px) scaleY(1);
+    }
+    100%{
+        transform: rotate(90deg) translate(10px, 30px) scaleY(2);
+    }
+}
+
+@keyframes spin3{
+    40%{
+        transform: rotate(0deg) translate(0px) scaleX(1);
+    }
+    75%{
+        transform: rotate(90deg) translate(-30px, 10px) scaleX(1);
+    }
+    100%{
+        transform: rotate(90deg) translate(-30px, 10px) scaleX(2);
+    }
+}
+
+@keyframes spin4{
+    65%{
+        transform: rotate(0deg) translate(0px) scaleY(1);
+    }
+    100%{
+        transform: rotate(90deg) translate(-10px, -30px) scaleY(2);
+    }
+}
+
+/* Main CSS */
+/* Content */
+.container{
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-top: 25vh;
+    padding: 2em;
+    background-color: rgb(201, 176, 176);
+    border: 0.6em solid rgb(165, 147, 147);
+    box-shadow: inset 0.6em 0.6em rgb(138, 125, 125);
+    font-size: 1.5em;
+}
+.h1Underline{
+    margin-bottom: 0.5em;
+    width: fit-content;
+    border-bottom: 0.15em solid rgb(113, 89, 89);
+}
+.h1Underline h1{
+    font-size: 2em;
+    color: rgb(113, 89, 89);
+    text-shadow: 0.03em 0.03em rgb(98, 90, 90);
+}
+.mainWord{
+    display: flex;
+    text-shadow: 0.03em 0.03em rgb(192, 59, 59);
+}
+.mainWord img{
+    margin-top: -0.5em;
+    width: 4.9em;
+    height: 4em;
+}
+.mainWord .p1{
+    font-size: 2.4em;
+    color: rgb(113, 89, 89);
+}
+.secWord{
+    display: flex;
+}
+.secWord p{
+    margin-right: 0.2em;
+}
+.secWord .p2{
+    font-size: 1.5em;
+    color: rgb(137, 71, 71);
+    text-shadow: 0.04em 0.04em rgb(98, 90, 90);
+}
+.secWord .p3{
+    font-size: 1.7em;
+    color: rgb(148, 35, 35);
+    text-shadow: 0.08em 0.08em rgb(98, 90, 90);
+}
+.tiwimolen{
+    width: 10em;
+    height: 10em;
+    margin: 2em;
+    box-shadow: 0.3em 0.3em gray;
+    border: 0.3em solid rgb(163, 141, 141);
+}
+.imageAudio{
+    display: flex;
+}
+.imageAudio .player{
+    margin-top: 7em;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+.imageAudio .player p{
+    margin-bottom: 0.5em;
+    font-size: 1.2em;
+    color: rgb(94, 75, 75);
+    text-shadow: 0.04em 0.04em rgb(98, 90, 90);
+}
+.imageAudio .player .buttons button{
+    background-color: rgb(180, 166, 166);
+    width: 5.5em;
+    height: 2.5em;
+}
+.imageAudio .player .buttons button:hover{
+    background-color: rgb(201, 188, 188);
+    width: 5.5em;
+    height: 2.5em;
+    box-shadow: 0.2em 0.3em gray;
+}
+.navContainer{
+    display: flex;
+}
+.navContainer a{
+    height: 2em;
+    padding-top: 0.9em;
+    width: 8em;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(113, 89, 89);
+    background-color: rgb(180, 166, 166);
+    border: 0.3em dotted rgb(104, 97, 97);
+    box-shadow: 0.2em 0.3em gray;
+    text-shadow: 0.04em 0.04em rgb(59, 53, 53);
+}
+.navContainer a:hover{
+    height: 2em;
+    padding-top: 0.9em;
+    width: 8em;
+    margin: auto;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(113, 89, 89);
+    background-color: rgb(193, 181, 181);
+    border: 0.3em solid rgb(137, 122, 122);
+    box-shadow: 0.2em 0.3em rgb(86, 84, 84);
+    text-shadow: 0.04em 0.07em rgb(29, 27, 27);
+}
+
+/* VtNote CSS */
+.containerVt{
+    display: block;
+    width: 60%;
+    margin: auto;
+    margin-top: 10vh;
+    padding: 2em;
+    background-color: rgb(201, 176, 176);
+    border: 0.6em solid rgb(165, 147, 147);
+    box-shadow: inset 0.6em 0.6em rgb(138, 125, 125);
+    font-size: 1.5em;
+}
+.headerVt{
+    font-size: 1.8em;
+    color: rgb(113, 89, 89);
+    text-shadow: 0.03em 0.03em rgb(98, 90, 90);
+    margin-bottom: 2em;
+}
+.ParaVt{
+    border-bottom: 0.3em solid rgb(165, 147, 147);
+}
+.ParaVt p{
+    text-indent: 1.3em;
+    margin-bottom: 1em;
+    font-size: 1.1em;
+    text-align: justify;
+    color: rgb(113, 77, 77);
+    text-shadow: 0.04em 0.04em rgb(145, 57, 57);
+}
+.ParaVt p .disclaimer{
+    font-size: 0.8em;
+}
+.ParaVt .writer{
+    margin-bottom: 1em;
+    font-size: 1.3em;
+    color: rgb(128, 94, 94);
+    text-shadow: 0.03em 0.03em rgb(97, 70, 70);
+}
+.MusicLyrics{
+    margin-top: 2em;
+    font-size: 1.2em;
+    text-align: center;
+    text-shadow: 0.02em 0.03em rgb(38, 37, 37);
+}
+#heartDec{
+    width: 4em;
+    height: 2em;
+}
+.MusicLyrics #title{
+    margin-bottom: 0.5em;
+    color: rgb(148, 50, 50);
+}
+.containerVt .Skyfall{
+    display: flex;
+    justify-content: center;
+}
+.containerVt .Skyfall .playerSkyfall{
+    margin-bottom: 3em;
+}
+.containerVt .Skyfall .buttonsSkyfall{
+    text-align: center;
+    margin-bottom: 2em;  
+}
+.containerVt .Skyfall .buttonsSkyfall button{
+    background-color: rgb(180, 166, 166);
+    width: 5.5em;
+    height: 2.5em;  
+}
+.containerVt .Skyfall .buttonsSkyfall button:hover{
+    background-color: rgb(201, 188, 188);
+    width: 5.5em;
+    height: 2.5em;
+    box-shadow: 0.2em 0.3em gray; 
+}
+.containerVt .Skyfall .skyfallLyrics{
+    font-size: 0.8em;
+    color: rgb(79, 72, 72);
+}
+.containerVt .LoG{
+    display:inline-flex;
+}
+.containerVt .LoG .buttonsLoG{
+    text-align: center;
+    font-size: 0.8em;
+    margin-bottom: 2em;
+}
+.containerVt .LoG .buttonsLoG button{
+    background-color: rgb(180, 166, 166);
+    width: 5.5em;
+    height: 2.5em;
+}
+.containerVt .LoG .buttonsLoG button:hover{
+    background-color: rgb(201, 188, 188);
+    width: 5.5em;
+    height: 2.5em;
+    box-shadow: 0.2em 0.3em gray;
+}
+.containerVt .LoG .LoGLyrics{
+    font-size: 0.8em;
+    color: rgb(79, 72, 72);
+}
+
+/* Memo CSS */
+.containerMemo{
+    display: block;
+    width: 60%;
+    margin: auto;
+    margin-top: 10vh;
+    padding: 2em;
+    background-color: rgb(201, 176, 176);
+    border: 0.6em solid rgb(165, 147, 147);
+    box-shadow: inset 0.6em 0.6em rgb(138, 125, 125);
+    font-size: 1.5em;
+}
+.containerMemo .openingMemo{
+    display: inline-flex;
+    margin-bottom: 2em;
+}
+.containerMemo .openingMemo p{
+    text-align: center;
+    font-size: 1.3em;
+    color: rgb(113, 89, 89);
+    text-shadow: 0.03em 0.03em rgb(98, 90, 90);
+}
+#heartDec2{
+    width: 5em;
+    height: 2.5em;
+}
+.containerMemo .contentMemo .contentMemoItem li{
+    display: inline-flex;
+    align-items: center;
+    text-align: justify;
+    text-indent: 1.3em;
+    margin-bottom: 1em;
+    font-size: 0.9em;
+    color: rgb(113, 77, 77);
+    text-shadow: 0.04em 0.04em rgb(145, 57, 57);
+}
+.containerMemo .contentMemo .contentMemoItem li img{
+    width: 8em;
+    margin-right: 2em;
+    margin-left: 2em;
+    box-shadow: 0.3em 0.3em gray;
+    border: 0.3em solid rgb(163, 141, 141);
+}
+.containerMemo .contentMemo .contentMemoItem .footerMemo{
+    border-top: 0.3em solid rgb(165, 147, 147);
+    padding: 1em;
+    text-align: justify;
+    font-size: 1.1em;
+    color: rgb(137, 71, 71);
+    text-shadow: 0.04em 0.04em rgb(98, 90, 90);
+}
+.containerMemo .contentMemo .contentMemoItem .footerMemo .footerMemoImages{
+    display: grid;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-spacing: 2px;
+}
+.containerMemo .contentMemo .contentMemoItem .footerMemo .footerMemoImages img{
+    width: 8em;
+    margin-right: 2em;
+    margin-left: 2em;
+    box-shadow: 0.3em 0.3em gray;
+    border: 0.3em solid rgb(163, 141, 141);
+    border-spacing: 2px;
+}
+/* Memems CSS */
+.containerMeme{
+    display: block;
+    width: 40%;
+    margin: auto;
+    margin-top: 25vh;
+    padding: 2em;
+    background-color: rgb(201, 176, 176);
+    border: 0.6em solid rgb(165, 147, 147);
+    box-shadow: inset 0.6em 0.6em rgb(138, 125, 125);
+    font-size: 1.5em;
+}
+.containerMeme .contentMeme{
+    text-align: center;
+    font-size: 1.3em;
+    color: rgb(113, 89, 89);
+    text-shadow: 0.03em 0.03em rgb(98, 90, 90);
+}
+.containerMeme .contentMeme p{
+    border-bottom: 0.3em solid rgb(165, 147, 147);
+    padding-bottom: 0.7em;
+}
+.containerMeme .contentMeme .imageMeme{
+    margin: auto;
+    width: fit-content;
+    margin-top: 1em;
+}
+.containerMeme .contentMeme .imageMeme img{
+    width: 12em;
+    box-shadow: 0.3em 0.3em gray;
+    border: 0.3em solid rgb(163, 141, 141);
+}
+.containerMeme .contentMeme .imageMeme img:hover{
+    width: 12em;
+    box-shadow: 0.3em 0.3em rgb(101, 99, 99);
+    border: 0.3em solid rgb(162, 155, 155);
+}
+.containerMeme .contentMeme .imageMeme img:active{
+    width: 12em;
+    box-shadow: 0.3em 0.3em rgb(127, 122, 122);
+    border: 0.3em solid rgb(139, 133, 133);
+}
