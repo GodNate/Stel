@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shan &#128151; Stel</title>
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+      audio{
+        position: absolute;
+        opacity: 0.1;
+      }
+      .play-btn{
+        position: absolute;
+        color: pink;
+        font-size: 50px;
+        padding: 10px 0 0 10px;
+        display: flex;
+        align-items:  center;
+      }
+      .play-btn p {
+        padding-left: 10px;
+        font-size: 20px;
+        margin: 0;
+      }
+      .play-btn i {
+        cursor: pointer;
+      }
+    </style>
+</head>
+<body>
+    
+    <div id="drag-container">
+        <div id="spin-container">
+          <img src="./img/1.jpg" alt="">
+          <img src="./img/2.jpg" alt="">
+          <img src="./img/3.jpg" alt="">
+          <img src="./img/4.jpg" alt="">
+          <img src="./img/5.jpg" alt="">
+          <img src="./img/6.jpg" alt="">
+          <img src="./img/7.jpg" alt="">
+          <img src="./img/8.jpg" alt="">
+          <img src="./img/9.jpg" alt="">
+          <img src="./img/10.jpg" alt="">
+          <img src="./img/11.jpg" alt="">
+          <img src="./img/12.jpg" alt="">
+          <img src="./img/14.jpg" alt="">
+          <img src="./img/15.jpg" alt="">
+          
+            <p class="heart">Shan &#128151; Stel</p>
+          
+        
+        </div>
+        <div id="ground"></div>
+      </div>
+      
+      <div id="canva">
+      <canvas id="canvas"></canvas>
+    </div>
+    <!-- <audio src="./Llunr  the world could end with you Official Lyric Video.mp3" autoplay loop></audio> -->
+    <audio src="Llunr  the world could end with you Official Lyric Video.mp3" loop id="iframeAudio">
+    </audio> 
+    <div class="play-btn">
+      <i class="fa-solid fa-play"></i>
+      <p id="play-text">⬅ Play me</p>
+    </div>
+    <script>
+      var playBtn = document.querySelector('.fa-play');
+      playBtn.addEventListener('click', function(){
+        var iframeAudio = document.getElementById('iframeAudio');
+        var playText = document.getElementById('play-text');
+        if(iframeAudio.paused){
+          iframeAudio.play();
+          iframeAudio.muted = false;
+          playBtn.classList.add('fa-pause');
+          playBtn.classList.remove('fa-play');
+          playText.innerText = 'Pause';
+        } else {
+          iframeAudio.pause();
+          playBtn.classList.remove('fa-pause');
+          playBtn.classList.add('fa-play');
+          playText.innerText = '⬅ Play me';
+        }
+      });
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>
